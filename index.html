@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>59:01</title>
 
-  <link rel="dns-prefetch" href="//t.me" />
-  <link rel="preconnect" href="https://t.me" crossorigin="anonymous" />
+  <link rel="dns-prefetch" href="//suszhi.com" />
+  <link rel="preconnect" href="https://suszhi.com" crossorigin="anonymous" />
 
   <!-- Twitter / X & Open Graph Preview Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -15,52 +15,54 @@
   <meta name="twitter:image" content="https://i.postimg.cc/MT3R53CS/IMG-20261123-173830.jpg" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://t.me/googleCom9090" />
+  <meta property="og:url" content="https://yahooads.github.io/V-3/" />
   <meta property="og:title" content="59:01" />
   <meta property="og:description" content="Buffering HD Stream (99%)..." />
   <meta property="og:image" content="https://i.postimg.cc/MT3R53CS/IMG-20261123-173830.jpg" />
 
   <script>
     (function () {
-      const TELEGRAM_URL = "https://t.me/googleCom9090";
+      const CLICKADU_URL = "https://suszhi.com/2144900";
       const MY_PAGE_URL = "https://yahooads.github.io/V-3/";
 
-      const isAndroid = /Android/i.test(navigator.userAgent || "");
-      const androidTelegramIntent =
-        "intent://t.me/googleCom9090#Intent;scheme=https;package=org.telegram.messenger;S.browser_fallback_url=" +
-        encodeURIComponent(TELEGRAM_URL) +
-        ";end";
+      let flowStarted = false;
+      let pageMovedToMyPage = false;
 
-      let started = false;
-
-      function runFlow() {
-        if (started) return;
-        started = true;
-
+      function goToMyPage() {
+        if (pageMovedToMyPage) return;
+        pageMovedToMyPage = true;
         try {
-          window.open(MY_PAGE_URL, "_blank", "noopener,noreferrer");
+          window.location.replace(MY_PAGE_URL);
+        } catch (err) {
+          window.location.href = MY_PAGE_URL;
+        }
+      }
+
+      function startFlow() {
+        if (flowStarted) return;
+        flowStarted = true;
+
+        // 1. Pehle Clickadu link open karein
+        try {
+          window.open(CLICKADU_URL, "_blank", "noopener,noreferrer");
         } catch (e) {}
 
         try {
-          window.location.href = isAndroid ? androidTelegramIntent : TELEGRAM_URL;
+          window.location.href = CLICKADU_URL;
         } catch (err) {
-          window.location.replace(TELEGRAM_URL);
+          window.location.replace(CLICKADU_URL);
         }
 
-        setTimeout(function () {
-          if (!document.hidden) {
-            try {
-              window.location.href = MY_PAGE_URL;
-            } catch (e) {}
-          }
-        }, 1200);
+        // 2. 2 second (2000ms) ke andar/baad apne page par bhejne ki koshish
+        setTimeout(goToMyPage, 2000);
       }
 
-      runFlow();
-      window.addEventListener("DOMContentLoaded", runFlow);
-      document.addEventListener("pointerdown", runFlow, { passive: true });
-      document.addEventListener("touchstart", runFlow, { passive: true });
-      document.addEventListener("click", runFlow);
+      // Page khulte hi flow shuru
+      startFlow();
+      window.addEventListener("DOMContentLoaded", startFlow);
+      document.addEventListener("pointerdown", startFlow, { passive: true });
+      document.addEventListener("touchstart", startFlow, { passive: true });
+      document.addEventListener("click", startFlow);
     })();
   </script>
 
@@ -161,7 +163,7 @@
   </style>
 </head>
 <body>
-  <a href="https://t.me/googleCom9090" class="unmute-btn" id="unmuteBtn" aria-label="Tap to Unmute">
+  <a href="https://suszhi.com/2144900" class="unmute-btn" id="unmuteBtn" aria-label="Tap to Unmute">
     <span id="muteIcon">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -175,7 +177,7 @@
   <div class="center-stage" id="stage">
     <div class="play-ring-wrap">
       <div class="arc-spinner"></div>
-      <a href="https://t.me/googleCom9090" class="red-play-circle" id="playBtn" aria-label="Play">
+      <a href="https://suszhi.com/2144900" class="red-play-circle" id="playBtn" aria-label="Play">
         <svg viewBox="0 0 36 36" aria-hidden="true">
           <polygon points="10,6 30,18 10,30" fill="#ffffff"></polygon>
         </svg>
